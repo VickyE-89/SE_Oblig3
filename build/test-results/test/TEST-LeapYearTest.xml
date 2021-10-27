@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LeapYearTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2021-10-27T12:14:24" hostname="VICKY" time="0.025">
+  <properties/>
+  <testcase name="if_year_modulo_100_and_modulo_not_400()" classname="LeapYearTest" time="0.02"/>
+  <testcase name="if_year_modulo_not_4()" classname="LeapYearTest" time="0.001"/>
+  <testcase name="if_year_modulo_400()" classname="LeapYearTest" time="0.001"/>
+  <testcase name="if_year_modulo_4_and_modulo_not_100()" classname="LeapYearTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
