@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class LeapYearTest {
 
-    //Tester om commit fungerer
     @Test
     public void if_year_modulo_400() {
         assertTrue(LeapYear.isLeapYear(2000));
