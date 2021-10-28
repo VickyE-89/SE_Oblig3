@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build-xyz:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -27,4 +27,20 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run all tests
-        run: LeapYearTest.java
+        run: run LeapYearTest -r w
+        
+      - name: Send OK notification
+        if: success() && github.ref == 'refs/heads/main'
+        uses: appleboy/telegram-action@master
+        with: 
+          to: ${{ secrets.TELEGRAM_TO }} 
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: "xyz-main-api: All tests passed!"
+          
+      - name: Send failure notification 
+        if: failure() && github.ref == 'refs/heads/main' 
+        uses: appleboy/telegram-action@master
+        with: 
+          to: ${{ secrets.TELEGRAM_TO }} 
+          token: ${{ secrets.TELEGRAM_TOKEN }} 
+          args: "xyz-main-api: WARNING: TESTS FAILED!"
