@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run all tests
-        run: run LeapYearTest -r w
+        run: LeapYearTest
         
       - name: Send OK notification
         if: success() && github.ref == 'refs/heads/main'
