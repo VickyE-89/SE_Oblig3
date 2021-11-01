@@ -6,7 +6,9 @@ public class LeapYearTest {
 
     @Test
     public void if_year_modulo_400() {
+
         assertTrue(LeapYear.isLeapYear(2000));
+        assertTrue(LeapYear.isLeapYear(2002));
     }
 
     @Test
