@@ -38,8 +38,8 @@ jobs:
         run: ./gradlew build 
 
       # Runs a single command using the runners shell
-      - name: Run all tests
-        run: LeapYearTest
+      #- name: Run all tests
+        #run: LeapYearTest
         
       #- name: Send OK notification
         #if: success() && github.ref == 'refs/heads/main'
