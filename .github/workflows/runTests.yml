@@ -47,10 +47,10 @@ jobs:
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: "xyz-main-api: All tests passed!"
           
-      - name: Send failure notification 
-        if: failure() && github.ref == 'refs/heads/main' 
-        uses: appleboy/telegram-action@master
-        with: 
-          to: ${{ secrets.TELEGRAM_TO }} 
-          token: ${{ secrets.TELEGRAM_TOKEN }} 
-          args: "xyz-main-api: WARNING: TESTS FAILED!"
+      # - name: Send failure notification 
+        #if: failure() && github.ref == 'refs/heads/main' 
+        #uses: appleboy/telegram-action@master
+        #with: 
+          #to: ${{ secrets.TELEGRAM_TO }} 
+          #token: ${{ secrets.TELEGRAM_TOKEN }} 
+          #args: "xyz-main-api: WARNING: TESTS FAILED!"
