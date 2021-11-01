@@ -39,7 +39,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run all tests
-        run: LeapYearTest.java
+        run: LeapYearTest
         
       #- name: Send OK notification
         #if: success() && github.ref == 'refs/heads/main'
