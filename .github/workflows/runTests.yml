@@ -23,7 +23,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build 
       - name: Run all tests
-        run: test/java/LeapYearTest
+        run: LeapYearTest.java
         
         
       
